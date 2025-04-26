@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resort Package Booking</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      background-image: url('https://c4.wallpaperflare.com/wallpaper/421/262/521/minimalism-digital-art-trees-sun-wallpaper-preview.jpg');
+      background-size: cover;
+
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    form {
+      background: white;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    button {
+      background: #27ae60;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #219150;
+    }
+
+    @media (max-width: 600px) {
+      form {
+        padding: 15px;
+      }
+
+      input, select, textarea {
+        font-size: 1rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+    nav {
+      background-color: #000000;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="GolfResortwebsite.html">Home</a>
+    <a href="packages.html">Packages</a>
+    <a href="custom-event.html">Custom Events</a>
+<a href="contact.html">Contact</a>
+  </nav>
+  <!-- Standard Package Booking Form -->
+  <form action="/submit-standard-booking" method="POST">
+    <h2>Standard Package Booking</h2>
+
+    <label>Full Name:
+      <input type="text" name="full_name" required />
+    </label>
+
+    <label>Email:
+      <input type="email" name="email" required />
+    </label>
+
+    <label>Phone Number:
+      <input type="tel" name="phone" pattern="[0-9]{10,15}" required />
+    </label>
+
+    <label>Package Name/ID:
+      <input type="text" name="package_id" required />
+    </label>
+
+    <label>Number of Guests:
+      <input type="number" name="guests" min="1" required />
+    </label>
+
+    <label>Check-in Date:
+      <input type="date" name="checkin" required />
+    </label>
+
+    <label>Check-out Date:
+      <input type="date" name="checkout" required />
+    </label>
+
+    <label>Payment Method:
+      <select name="payment_method" required>
+        <option value="">Select</option>
+        <option value="credit_card">Credit Card</option>
+        <option value="paypal">PayPal</option>
+        <option value="bank_transfer">Bank Transfer</option>
+      </select>
+    </label>
+
+    <button type="submit">Book Now</button>
+  </form>
+
+  <!-- Custom Package Booking Form -->
+  <form action="/submit-custom-booking" method="POST">
+    <h2>Custom Package Booking</h2>
+
+    <label>Full Name:
+      <input type="text" name="full_name" required />
+    </label>
+
+    <label>Email:
+      <input type="email" name="email" required />
+    </label>
+
+    <label>Phone Number:
+      <input type="tel" name="phone" pattern="[0-9]{10,15}" required />
+    </label>
+
+    <label>Number of Guests:
+      <input type="number" name="guests" min="1" required />
+    </label>
+
+    <label>Preferred Destination:
+      <input type="text" name="destination" required />
+    </label>
+
+    <label>Check-in Date:
+      <input type="date" name="checkin" required />
+    </label>
+
+    <label>Check-out Date:
+      <input type="date" name="checkout" required />
+    </label>
+
+    <label>Accommodation Type:
+      <select name="accommodation" required>
+        <option value="">Select</option>
+        <option value="standard_room">Standard Room</option>
+        <option value="deluxe_room">Deluxe Room</option>
+        <option value="villa">Villa</option>
+      </select>
+    </label>
+
+    <label>Activities / Amenities:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="activities" value="spa" /> Spa</label>
+      <label><input type="checkbox" name="activities" value="golf" /> Golf</label>
+      <label><input type="checkbox" name="activities" value="water_sports" /> Water Sports</label>
+      <label><input type="checkbox" name="activities" value="hiking" /> Hiking</label>
+    </div>
+
+    <label>Special Requests:
+      <textarea name="special_requests" rows="4" placeholder="e.g. dietary needs, room preference"></textarea>
+    </label>
+
+    <label>Budget Range:
+      <input type="text" name="budget" placeholder="e.g. $1000 - $2000" required />
+    </label>
+
+    <label>Payment Method:
+      <select name="payment_method" required>
+        <option value="">Select</option>
+        <option value="credit_card">Credit Card</option>
+        <option value="paypal">PayPal</option>
+        <option value="bank_transfer">Bank Transfer</option>
+      </select>
+    </label>
+
+    <button type="submit">Submit Request</button>
+  </form>
+
+</body>
+</html>

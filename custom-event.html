@@ -1,0 +1,121 @@
+<!-- custom-event.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Events - Sea View Golf Resort</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: rgba(112, 112, 112, 0.406);
+      background-image: url('https://images2.alphacoders.com/135/1355052.png');
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #000000;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      background-color: #004225;
+      background-image: url('https://imgs.search.brave.com/ZpfkM3wPtEj9NnSVtsX3uzR95JTJJc_KQ3i0UwO-3xw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1Lzk1LzcwLzU5/LzM2MF9GXzU5NTcw/NTk2M18wb3dQbWRo/Z3V6S3FBRlZ5RDRC/cmVjRWlxeDIzc0R5/SS5qcGc');
+      color: white;
+      background-size: cover;
+      background-position: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      background-color: #004225;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #006838;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Custom Event Packages</h1>
+    <p>Plan your ideal corporate event or extended golf retreat</p>
+  </header>
+  <nav>
+    <a href="GolfResortwebsite.html">Home</a>
+    <a href="packages.html">Packages</a>
+<a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="event">Event Type</label>
+      <select id="event" name="event">
+        <option value="corporate">Corporate</option>
+        <option value="private">Private</option>
+        <option value="group">Group Outing</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="dates">Preferred Dates</label>
+      <input type="text" id="dates" name="dates" placeholder="e.g. 15-20 July 2025">
+
+      <label for="message">Additional Information</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tell us more about your event..."></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </main>
+</body>
+</html>

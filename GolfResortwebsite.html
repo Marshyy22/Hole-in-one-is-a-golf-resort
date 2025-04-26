@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golf Resort - Luxury Getaways</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+        background-color: rgb(112,112,112);
+      background-image: url('https://wallpapers.com/images/hd/sunset-in-augusta-3440x1440p-golf-course-background-6tzgspt28d9ctnli.jpg');
+      color: #333;
+      background-size: cover;
+            background-position: center;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    nav {
+      background-color: #000000;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #004225;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    footer {
+      background-color: #393939;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .gallery {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center the images */
+    gap: 15px; /* Space between images */
+}
+
+.gallery img {
+    width: 300px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.package-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.package-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.package-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.package-card {
+  background-color: rgba(0, 66, 37, 0.7);
+  padding: 30px;
+  border-radius: 15px;
+  width: 50%;
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+}
+
+.package-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+  padding:auto;
+}
+
+.package-card ul {
+  list-style: disc;
+  text-align: left;
+  padding:auto;
+}
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide dropdown by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0a0a0a;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  min-width: 180px;
+  z-index: 1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  display: block;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #2a2f2d;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Hole in one golf resort</h1>
+    <p>Luxury Stays | Elite Golfing | Custom Packages</p>
+  </header>
+
+  <nav>
+    <a href="packages.html">Packages</a>
+    <a href="custom-event.html">Custom Events</a>
+    <a href="#🏌️ About Us">About us</a>
+<a href="contact.html">Contact</a>
+<li class="dropdown">
+  <a href="#">Services</a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Golf Lessons</a></li>
+    <li><a href="#">Club Rental</a></li>
+    <li><a href="#">Spa & Wellness</a></li>
+    <li><a href="#">Event Hosting</a></li>
+  </ul>
+</li>
+
+  </nav>
+
+  <section class="package-section">
+    <div class="package-container">
+      <div class="package-card">
+        <h2>🏌️ About Us</h2>
+        <p>
+          Welcome to [Resort Name], your premier destination for luxury, leisure, and world-class golfing. Nestled amidst breathtaking natural landscapes, our resort offers a unique blend of relaxation and recreation.
+        </p>
+        <p>
+          Whether you're a seasoned golfer or a curious beginner, our championship-grade courses, expert instructors, and state-of-the-art facilities promise an unforgettable experience. Beyond the fairways, indulge in fine dining, spa treatments, and elegant accommodations designed to help you unwind in style.
+        </p>
+        <p>
+          At Sea View Golf Resort, we don’t just offer a game — we offer a getaway.
+        </p>
+      </div>
+    
+  </section>
+  <div class="image-gallery">
+        <div class="gallery">
+            <img src="https://blog.barricaid.com/hubfs/8.16%20-%20Is%20It%20Okay%20to%20Play%20Golf%20with%20a%20Herniated%20Disc-min.png">
+            <img src="https://images.ctfassets.net/56u5qdsjym8c/4vGYv7GuuSRzQIAXBuGxVR/53572caa70e497e811eb0d5e8ffa415a/APGA-GamesToPlay-Slide-Hero.png">
+            <img src="https://youthoncourse.org/hs-fs/hubfs/Lena%20Durette_Rollins%20College_Alumni-1.jpeg?width=780&height=780&name=Lena%20Durette_Rollins%20College_Alumni-1.jpeg">
+            <img src="https://imgs.search.brave.com/nULdEfBWR7F2gFqj10Yqi9uVMN5d24N9W0Q4I-rAbyY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/Y2VuZS13aXRoLWZy/aWVuZHMtZ29sZi1j/b3Vyc2VfMjMtMjE1/MDU1MTMzOS5qcGc_/c2VtdD1haXNfaHli/cmlkJnc9NzQw">
+            <img src="https://media.timeout.com/images/105658195/image.jpg">
+        <img src="https://static.wixstatic.com/media/9a8d4c_04d0241426ee4c9cb227a103c4a9eec2~mv2_d_4608_2592_s_4_2.jpg/v1/fill/w_560,h_420,al_c,q_80,usm_1.20_1.00_0.01,enc_auto/9a8d4c_04d0241426ee4c9cb227a103c4a9eec2~mv2_d_4608_2592_s_4_2.jpg">
+        </div>
+    </div>
+
+  <br><footer>
+    <p>&copy; 2025 Sea View Golf Resort. All rights reserved.</p>
+  </footer>
+</body>
+</html>
